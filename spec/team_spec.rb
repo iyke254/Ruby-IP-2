@@ -59,4 +59,13 @@ require('rspec')
         expect(Team.find(test_team.id())).to(eq(test_team))
       end
     end
+
+    describe('#add_member') do
+      it("adds a new member to a team") do
+        test_team = Team.new("Bob's Used Cars")
+        test_member = Member.new("Toyota", "Prius", 2000)
+        test_team.add_member(test_member)
+        expect(test_team.members()).to(eq([test_member]))
+      end
+    end
   end
