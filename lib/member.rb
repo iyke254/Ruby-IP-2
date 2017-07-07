@@ -19,4 +19,13 @@ class Member
   define_method(:credentials) do
     @credentials
   end
+
+  define_singleton_method(:find) do |identification|
+    found_member = nil
+    @@members.each() do |member|
+      if member.id().eql?(identification.to.i())
+        found_member = member
+      end
+    end
+    found_member    
 end
