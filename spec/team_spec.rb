@@ -1,5 +1,6 @@
 require('rspec')
   require('team')
+  require('member')
 
   describe(Team) do
     before() do
