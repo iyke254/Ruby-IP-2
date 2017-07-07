@@ -16,8 +16,8 @@ require('sinatra')
     name = params.fetch("name")
     age = params.fetch("age")
     credentials = params.fetch("credentials")
-    member = Member.new(name, age, credentials)
-    member.save()
+    @member = Member.new(name, age, credentials)
+    @member.save()
     erb(:success)
   end
 
