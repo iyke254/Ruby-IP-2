@@ -3,6 +3,8 @@ class Member
     @credentials = credentials
   end
 
-  define_method(:credentials) do
-
+  define_method(:age) do
+    current_year = Time.new().year()
+    current_year.-(@year)
   end
+end
