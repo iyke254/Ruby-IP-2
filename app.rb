@@ -14,5 +14,6 @@ require('sinatra')
 
   post('/members') do
     name = params.fetch("name")
-    name = params.fetch("name")
+    age = params.fetch("age")
+    credentials = params.fetch("credentials")
   end
