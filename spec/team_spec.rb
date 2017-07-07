@@ -7,22 +7,22 @@ require('rspec')
     end
 
     describe('#name') do
-      it("returns the name of the dealership") do
-        test_dealership = Dealership.new("Bob's Used Cars")
-        expect(test_dealership.name()).to(eq("Bob's Used Cars"))
+      it("returns the name of the team") do
+        test_team = Team.new("The Untouchables")
+        expect(test_team.name()).to(eq("The Untouchables"))
       end
     end
 
     describe('#id') do
-      it("returns the id of the dealership") do
-        test_dealership = Dealership.new("Bob's Used Cars")
-        expect(test_dealership.id()).to(eq(1))
+      it("returns the id of the team") do
+        test_team = Team.new("The Untouchables")
+        expect(test_team.id()).to(eq(1))
       end
     end
 
-    describe('#cars') do
-      it("initially returns an empty array of cars for the dealership") do
-        test_dealership = Dealership.new("Bob's Used Cars")
+    describe('#members') do
+      it("initially returns an empty array of members in the team") do
+        test_team = Team.new("The Untouchables")
         expect(test_dealership.cars()).to(eq([]))
       end
     end
