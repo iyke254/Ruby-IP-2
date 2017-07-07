@@ -5,6 +5,7 @@ class Member
     @name = name
     @age = age
     @credentials = credentials
+    @id = @@members.length().+(1)
   end
 
   define_method(:name) do
@@ -18,3 +19,4 @@ class Member
   define_method(:credentials) do
     @credentials
   end
+end

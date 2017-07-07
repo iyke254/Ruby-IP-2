@@ -25,4 +25,18 @@ require('rspec')
       expect(test_member.credentials()).to(eq("Founder"))
     end
   end
+
+  describe("#id") do
+    it("returns the id of the member") do
+      test_member = Member.new("Isaac", 52, "Founder")
+      test_member.save()
+      expect(test_member.id())to(eq(1))
+    end
+  end
+
+  describe(".find") do
+    it("returns a member by iys id number") do
+      test_member = Member.new("Isaac", 52, "Founder")
+    end
+  end
 end
