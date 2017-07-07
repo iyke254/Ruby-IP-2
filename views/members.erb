@@ -1,0 +1,6 @@
+<h1> Checkout some of our members </h1>
+
+<ul>
+  <% @members.each() do |member| %>
+    <li><a href="/members/<%= member.id() %>" </li>
+</ul>
