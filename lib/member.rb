@@ -27,5 +27,6 @@ class Member
         found_member = member
       end
     end
-    found_member    
+    found_member
+end
 end
