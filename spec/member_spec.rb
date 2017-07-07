@@ -30,17 +30,17 @@ require('rspec')
     it("returns the id of the member") do
       test_member = Member.new("Isaac", 52, "Founder")
       test_member.save()
-      expect(test_member.id())to(eq(1))
+      expect(test_member.id()).to(eq(1))
     end
   end
 
   describe(".find") do
-    it("returns a member by iys id number") do
+    it("returns a member by its id number") do
       test_member = Member.new("Isaac", 52, "Founder")
       test_member.save()
       test_member2 = Member.new("Luke", 38, "Member")
       test_member2.save()
-      expect(Member.find(test_member.id())).to(eq(test_member))
+      expect(Member.find(test_member.id)).to(eq(test_member))
     end
   end
 end

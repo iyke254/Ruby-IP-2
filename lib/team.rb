@@ -1,5 +1,5 @@
-class team
-    @@team = []
+class Team
+    @@teams = []
 
     define_method(:initialize) do |name|
       @name = name
@@ -44,3 +44,4 @@ class team
     define_method(:add_member) do |member|
       @members.push(members)
   end
+end

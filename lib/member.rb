@@ -20,13 +20,23 @@ class Member
     @credentials
   end
 
+  define_method(:id) do
+    @id
+  end
+
+  define_singleton_method(:clear) do
+    @@members
+  end
+
+  define_method(:save) do
+    @@members.push(self)
+  end
+
   define_singleton_method(:find) do |identification|
     found_member = nil
     @@members.each() do |member|
-      if member.id().eql?(identification.to.i())
-        found_member = member
+      found_member = member if member.id.eql?(identification)
       end
+      found_member
     end
-    found_member
-end
 end

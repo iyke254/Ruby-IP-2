@@ -54,7 +54,7 @@ require('rspec')
       it("returns a team by its id number") do
         test_team = Team.new("The Untouchables")
         test_team.save()
-        test_team2 = Team.new("Jane's Cars")
+        test_team2 = Team.new("The Winners")
         test_team2.save()
         expect(Team.find(test_team.id())).to(eq(test_team))
       end
@@ -62,10 +62,10 @@ require('rspec')
 
     describe('#add_member') do
       it("adds a new member to a team") do
-        test_team = Team.new("Bob's Used Cars")
-        test_member = Member.new("Toyota", "Prius", 2000)
+        test_team = Team.new("The Untouchables")
+        test_member = Member.new("John", 52, "Member")
         test_team.add_member(test_member)
-        expect(test_team.members()).to(eq([test_member]))
+        expect(test_team.members()).to(eq(test_member))
       end
     end
   end

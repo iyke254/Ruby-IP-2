@@ -21,7 +21,7 @@ require('sinatra')
    name = params.fetch('name')
    Team.new(name).save()
    @teams = Team.all()
-   erb(:success)
+   erb(:teams)
  end
 
  get('/members/:id') do
@@ -49,4 +49,3 @@ require('sinatra')
    @team.add_member(@member)
    erb(:success)
  end
-end
