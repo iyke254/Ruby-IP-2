@@ -1,0 +1,12 @@
+<h3>Here are all the members in the Team</h3>
+
+
+<ul>
+    <% @team.members().each() do |member| %>
+      <li><a href="/members/<%= member.id() %>"><%= member.name() %> <%= member.credentials() %> <%= member.age() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href="/teams/<%= @team.id%>/members/new">Add a new member</a>
+  <a href="/">Return to Main Page</a>
+</ul>
