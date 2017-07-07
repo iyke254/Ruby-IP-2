@@ -23,39 +23,39 @@ require('rspec')
     describe('#members') do
       it("initially returns an empty array of members in the team") do
         test_team = Team.new("The Untouchables")
-        expect(test_dealership.cars()).to(eq([]))
+        expect(test_team.members()).to(eq([]))
       end
     end
 
     describe("#save") do
-      it("adds a dealership to the array of saved dealerships") do
-        test_dealership = Dealership.new("Bob's Used Cars")
-        test_dealership.save()
-        expect(Dealership.all()).to(eq([test_dealership]))
+      it("adds a team to the array of saved teams") do
+        test_team = Team.new("The Untouchables")
+        test_team.save()
+        expect(Team.all()).to(eq([test_team]))
       end
     end
 
     describe(".all") do
       it("is empty at first") do
-        expect(Dealership.all()).to(eq([]))
+        expect(Team.all()).to(eq([]))
       end
     end
 
     describe(".clear") do
-      it("empties out all of the saved dealerships") do
-        Dealership.new("Bob's Used Cars").save()
-        Dealership.clear()
-        expect(Dealership.all()).to(eq([]))
+      it("empties out all of the saved teams") do
+        Team.new("The Untouchabless").save()
+        Team.clear()
+        expect(Team.all()).to(eq([]))
       end
     end
 
     describe(".find") do
-      it("returns a dealership by its id number") do
-        test_dealership = Dealership.new("Bob's Used Cars")
-        test_dealership.save()
-        test_dealership2 = Dealership.new("Jane's Cars")
-        test_dealership2.save()
-        expect(Dealership.find(test_dealership.id())).to(eq(test_dealership))
+      it("returns a team by its id number") do
+        test_team = Team.new("The Untouchables")
+        test_team.save()
+        test_team2 = Team.new("Jane's Cars")
+        test_team2.save()
+        expect(Team.find(test_team.id())).to(eq(test_team))
       end
     end
   end
