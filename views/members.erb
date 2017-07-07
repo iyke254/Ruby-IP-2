@@ -2,5 +2,6 @@
 
 <ul>
   <% @members.each() do |member| %>
-    <li><a href="/members/<%= member.id() %>" </li>
+    <li><a href="/members/<%= member.id() %>"<%= member.name() %></a> </li>
+  <% end %>  
 </ul>
